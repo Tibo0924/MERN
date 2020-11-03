@@ -1,4 +1,6 @@
 {
-	"mongoURI": "mongodb+srv://tibs:Lofasz123@cluster0.islgb.mongodb.net/<dbname>?retryWrites=true&w=majority",
-	"jwtSecret": "mysecrettoken"
+  "mongoURI": "mongodb+srv://tibs:Lofasz123@cluster0.islgb.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "df00811cffc058390f91",
+  "githubSecret": "b15c35d9f559b390b8662b1fbfafcc823f2b573b"
 }
