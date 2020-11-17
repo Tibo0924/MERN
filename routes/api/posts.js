@@ -110,7 +110,6 @@ router.put("/like/:id", auth, async (req, res) => {
     const post = await Post.findById(req.params.id);
 
     // Check if post has already been liked
-
     if (
       post.likes.filter((like) => like.user.toString() === req.user.id).length >
       0
@@ -136,7 +135,6 @@ router.put("/unlike/:id", auth, async (req, res) => {
     const post = await Post.findById(req.params.id);
 
     // Check if post has already been liked
-
     if (
       post.likes.filter((like) => like.user.toString() === req.user.id)
         .length === 0
@@ -145,7 +143,6 @@ router.put("/unlike/:id", auth, async (req, res) => {
     }
 
     // Get remove index
-
     const removeIndex = post.likes
       .map((like) => like.user.toString())
       .indexOf(req.user.id);
@@ -205,18 +202,15 @@ router.delete("/comment/:id/:comment_id", auth, async (req, res) => {
     );
 
     // Make sure comment exist
-
     if (!comment) {
       return res.status(404).json({ msg: "Comment does not exist" });
     }
 
     // Check user
-
     if (comment.user.toString() !== req.user.id) {
       return res.status(401).json({ msg: "User not authorized" });
     }
     // Get remove index
-
     const removeIndex = post.comments
       .map((comment) => comment.user.toString())
       .indexOf(req.user.id);
