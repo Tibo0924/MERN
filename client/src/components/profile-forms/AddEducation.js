@@ -93,7 +93,7 @@ const AddEducation = ({ addEducation, history }) => {
               name="current"
               value=""
             />{" "}
-            Current Job
+            Current
           </p>
         </div>
         <div className="form-group">
